@@ -1,5 +1,6 @@
 package gateway;
 
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import reactor.core.publisher.Mono;
 
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 // tag::code[]
 @SpringBootApplication
 @EnableConfigurationProperties(UriConfiguration.class)
+@EnableDiscoveryClient
 @RestController
 public class Application {
 
