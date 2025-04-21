@@ -6,13 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gs-gateway (2)" />
         <module name="gs-gateway (1)" />
         <module name="gs-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="gs-gateway (1)" target="21" />
+      <module name="gs-gateway (2)" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
