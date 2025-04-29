@@ -12,7 +12,7 @@ public class GatewayConfig {
         return builder.routes()
                 .route("userService", r ->
                         r.path("/users/**") // Все запросы, начинающиеся с /user
-                                .uri("http://localhost:8080")) // URL вашего User Service
+                                .uri("http://localhost:8083")) // URL вашего User Service
                 .route("companyService", r ->
                         r.path("/companies/**") // Все запросы, начинающиеся с /company
                                 .uri("http://localhost:8081")) // URL вашего Company Service
