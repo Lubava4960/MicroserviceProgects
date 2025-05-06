@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "",
+      "type": "gateway.UriConfiguration",
+      "sourceType": "gateway.UriConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "httpbin",
+      "type": "java.lang.String",
+      "sourceType": "gateway.UriConfiguration"
+    }
+  ],
+  "hints": []
+}
