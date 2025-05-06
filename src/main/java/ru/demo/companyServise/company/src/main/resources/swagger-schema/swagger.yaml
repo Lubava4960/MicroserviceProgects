@@ -1,0 +1,158 @@
+openapi: 3.0.3
+info:
+  title: Компании
+  version: 1.0.0
+  description: "API для получения информации о компаниях"
+servers:
+  - url: http://Localhost:8081
+paths:
+  /companies:
+    post:
+      summary: "создать новую компанию"
+      description: "введите данные новой компании"
+      tags:
+        - "компании"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CompanyCreateDto'
+      responses:
+        '200':
+          description: "Создана новая компания"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Company'
+        '400':
+          description: "Некорректные данные запроса"
+
+    get:
+      summary: "получить список компаний"
+      tags:
+        - "компании"
+      responses:
+        '200':
+          description: "Список компаний"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Company'
+
+  /companies/{companyId}:
+    get:
+      summary: "получить данные сотрудников по id компании"
+      description: "введите данные id компании"
+      tags:
+        - "компании"
+      parameters:
+        - name: companyId
+          in: path
+          required: true
+          description: "ID компании"
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: "Список пользователей компании"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+        '404':
+          description: "Компания не найдена"
+
+    put:
+      summary: "обновить данные о компании"
+      description: "введите id и измените данные"
+      tags:
+        - "компании"
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: "ID компании"
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CompanyUpdateDto'
+      responses:
+        '200':
+          description: "Данные компании обновлены"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Company'
+        '404':
+          description: "Компания не найдена"
+
+    delete:
+      summary: "удалить данные компании"
+      description: "введите id компании"
+      tags:
+        - "компании"
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: "ID компании"
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: "Компания успешно удалена"
+        '404':
+          description: "Компания не найдена"
+
+components:
+  schemas:
+    Company:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        title:
+          type: string
+        budget:
+          type: number
+          format: double
+
+    CompanyCreateDto:
+      type: object
+      properties:
+        title:
+          type: string
+        budget:
+          type: number
+          format: double
+      required:
+        - title
+        - budget
+    CompanyUpdateDto:
+      type: object
+      properties:
+        title:
+          type: string
+        budget:
+          type: number
+          format: double
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        email:
+          type: string

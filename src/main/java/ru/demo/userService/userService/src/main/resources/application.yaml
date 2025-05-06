@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: userService
+
+  cloud:
+    discovery:
+      client:
+        serviceUrl:
+          defaultZone: http://localhost:8761/eureka/
+
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 4795895q
+    driver-class-name: org.postgresql.Driver
+server:
+  port: 8083
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+springdoc:
+  swagger-ui:
+    enabled: ${SWAGGER_UI:true}
+  api-docs:
+    enabled: ${SWAGGER_API_DOCS:true}
+
+  spring:
+    profiles: development

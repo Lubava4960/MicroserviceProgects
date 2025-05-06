@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  eureka-server:
+    image: openjdk:11
+    ports:
+      - "8761:8761"
+    volumes:
+      - ./eureka-server:/app
+    working_dir: /app
+    command: ["java", "-jar", "eureka-server.jar"]
+
+
+  userService:
+    image: openjdk:11
+    ports:
+      - "8083:8083"
+    volumes:
+      - ./userService:/app
+    working_dir: /app
+    command: ["java", "-jar", "userService.jar"]
+    depends_on:
+      - db
+
+  company-service:
+    image: openjdk:11
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./company-service:/app
+    working_dir: /app
+    command: ["java", "-jar", "company-service.jar"]
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 4795895q
+    ports:
+      - "5434:5432"
+
+  gateway-service:
+    image: openjdk:11
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./gateway-service:/app
+    working_dir: /app
+    command: [ "java", "-jar", "gateway-service.jar" ]
+    depends_on:
+      - db

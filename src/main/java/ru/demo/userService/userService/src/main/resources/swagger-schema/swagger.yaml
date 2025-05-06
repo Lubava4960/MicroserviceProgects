@@ -1,0 +1,180 @@
+openapi: 3.0.3
+info:
+  title: Услуги сотрудников API
+  version: 1.0.0
+  description: "API для управления сотрудниками. Контакты: [Lubov](mailto:lwm28@rambler.ru)."
+servers:
+  - url: http://localhost:8083
+
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        firstName:
+          type: string
+          example: "Иван"
+        lastName:
+          type: string
+          example: "Иванов"
+        email:
+          type: string
+          example: "ivan.ivanov@example.com"
+        phone:
+          type: string
+          example: "89165555555"
+      required:
+        - id
+        - firstName
+        - lastName
+        - email
+        - phone
+
+    UserCreateDto:
+      type: object
+      properties:
+        firstName:
+          type: string
+          example: "Иван"
+        lastName:
+          type: string
+          example: "Иванов"
+        email:
+          type: string
+          example: "ivan.ivanov@example.com"
+        phone:
+          type: string
+          example: "89165555555"
+      required:
+        - firstName
+        - lastName
+        - email
+        - phone
+
+    UserUpdateDto:
+      type: object
+      properties:
+        firstName:
+          type: string
+          example: "Петр "
+        lastName:
+          type: string
+          example: "Перов "
+        email:
+          type: string
+          example: "updated.pioter.petrov@example.com"
+        phone:
+          type: string
+          example: "89165555555 "
+
+
+paths:
+  /users:
+    post:
+      summary: "Ввести данные нового сотрудника"
+      description: "Введите данные сотрудника"
+      tags:
+        - сотрудники
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserCreateDto'
+      responses:
+        '200':
+          description: "Сотрудник успешно создан"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+
+    get:
+      summary: "Получить данные всех сотрудников"
+      tags:
+        - сотрудники
+      responses:
+        '200':
+          description: "Успешное получение списка сотрудников"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+
+  /users/{id}:
+    get:
+      summary: "Получение сотрудника по ID"
+      description: "Введите ID сотрудника для получения информации"
+      tags:
+        - сотрудники
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: "ID сотрудника"
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: "Успешное получение сотрудника"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '404':
+          description: "Сотрудник не найден"
+
+    put:
+      summary: "Обновить данные сотрудника"
+      description: "Введите данные ID сотрудника и измените данные"
+      tags:
+        - сотрудники
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: "ID сотрудника"
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserUpdateDto'
+      responses:
+        '200':
+          description: "Сотрудник успешно обновлен"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '404':
+          description: "Сотрудник не найден"
+    delete:
+      summary: "Удалить данные сотрудника"
+      description: "Введите ID сотрудника для удаления"
+      tags:
+        - сотрудники
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: "ID сотрудника"
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: "Сотрудник успешно удален"
+        '404':
+          description: "Сотрудник не найден"
