@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пользовательский интерфейс</title>
+</head><!DOCTYPE html>
+       <html lang="ru">
+       <head>
+           <meta charset="UTF-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <title>Управление пользователями</title>
+           <style>
+               body {
+                   font-family: Arial, sans-serif;
+               }
+               #usersList {
+                   margin-top: 20px;
+                   border: 1px solid #ccc;
+                   padding: 10px;
+                   max-width: 400px;
+                   overflow-wrap: break-word;
+               }
+               .user-item {
+                   padding: 5px;
+                   border-bottom: 1px solid #eee;
+               }
+           </style>
+       </head>
+       <body>
+           <h1>Управление пользователями</h1>
+
+           <h2>Получить всех пользователей</h2>
+           <button id="getUsersButton">Получить пользователей</button>
+           <div id="usersList"></div>
+
+           <script>
+               // Функция для получения пользователей
+               document.getElementById('getUsersButton').onclick = async function() {
+                   const usersList = document.getElementById('usersList');
+                   usersList.innerHTML = "Загрузка..."; // Сообщение о загрузке
+
+                   try {
+                       const response = await fetch('http://localhost:8080/users'); // URL вашего API Gateway
+                       if (!response.ok) {
+                           throw new Error(`Ошибка HTTP: ${response.status}`);
+                       }
+
+                       const users = await response.json();
+                       usersList.innerHTML = ""; // Очищаем поле
+
+                       // Проверка на наличие пользователей
+                       if (users.length === 0) {
+                           usersList.innerHTML = "Пользователи не найдены.";
+                           return;
+                       }
+
+                       // Отображение пользователей
+                       users.forEach(user => {
+                           const userItem = document.createElement('div');
+                           userItem.className = 'user-item';
+                           userItem.textContent = `ID: ${user.id}, Имя: ${user.name}`;
+                           usersList.appendChild(userItem);
+                       });
+                   } catch (error) {
+                       usersList.innerHTML = "Ошибка: " + error.message;
+                   }
+               };
+           </script>
+       </body>
+       </html>
+
+<body>
+    <h1>Управление пользователями</h1>
+
+    <h2>Получить всех пользователей</h2>
+    <button id="getUsersButton">Получить пользователей</button>
+    <div id="usersList"></div>
+
+    <script>
+      // Функция для получения пользователей
+      document.getElementById('getUsersButton').onclick = async function() {
+          const response = await fetch('http://localhost:8080/users'); // URL вашего API Gateway
+          const users = await response.json();
+
+          const usersList = document.getElementById('usersList');
+          usersList.innerHTML = JSON.stringify(users, null, 2);
+      };
+    </script>
+</body>
+</html>
