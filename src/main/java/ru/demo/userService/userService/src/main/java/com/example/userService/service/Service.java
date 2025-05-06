@@ -1,5 +1,6 @@
 package ru.demo.userService.userService.src.main.java.com.example.userService.service;
 
+import jakarta.transaction.Transactional;
 import ru.demo.userService.userService.src.main.java.com.example.userService.dto.UserCreateDto;
 
 import ru.demo.userService.userService.src.main.java.com.example.userService.dto.UserUpdateDto;
@@ -7,12 +8,8 @@ import ru.demo.userService.userService.src.main.java.com.example.userService.map
 import ru.demo.userService.userService.src.main.java.com.example.userService.model.User;
 import ru.demo.userService.userService.src.main.java.com.example.userService.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -26,12 +23,13 @@ public class Service {
     public Service(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
-
+    @Transactional
     public User createUser(UserCreateDto userCreateDto) {
         if (userCreateDto.getFirstName() == null || userCreateDto.getFirstName().isEmpty()) {
             throw new IllegalArgumentException("First name cannot be null or empty");
         }
         User user = new User();
+
         user.setFirstName(userCreateDto.getFirstName());
         user.setLastName(userCreateDto.getLastName());
         user.setPhoneNumber(userCreateDto.getPhoneNumber());
@@ -47,7 +45,7 @@ public class Service {
                 .orElseThrow(() -> new EntityNotFoundException("User not found with ID: " + id));
     }
 
-    public User updateUser(long id, UserUpdateDto userUpdateDto) throws ChangeSetPersister.NotFoundException {
+    public ru.demo.userService.userService.src.main.java.com.example.userService.dto.UserCreateDto updateUser(long id, UserUpdateDto userUpdateDto) throws ChangeSetPersister.NotFoundException {
         User user = userRepository.findById(id)
                 .orElseThrow(ChangeSetPersister.NotFoundException::new);
 

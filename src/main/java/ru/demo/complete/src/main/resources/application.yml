@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: gateway-server
+
+  cloud:
+    discovery:
+      client:
+        service-url:
+          defaultZone: http://localhost:8761/eureka/ # URL  Eureka-сервера
+
+cloud:
+    gateway:
+      routes:
+        - id: userService
+          uri: lb://userService # Имя в Eureka
+          predicates:
+            - Path= http://localhost:8083
+
+        - id: company-service
+          uri: lb://company-service # Имя в Eureka
+          predicates:
+            - Path=http://localhost:8081
+

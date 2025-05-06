@@ -14,7 +14,7 @@ public interface UserMapper {
 
     static void updateUserFromDto(User user, UserUpdateDto userUpdateDto) {
         if (userUpdateDto != null) {
-            // Используем значения из userUpdateDto для обновления user
+
             user.setFirstName(userUpdateDto.getFirstName());
             user.setLastName(userUpdateDto.getLastName());
             user.setEmail(userUpdateDto.getEmail());
@@ -23,14 +23,14 @@ public interface UserMapper {
         }
     }
 
-    // Метод для преобразования объекта User в UserCreateDto
+
     static UserCreateDto toDTO(User user) {
         if (user == null) {
             return null;
         }
 
         UserCreateDto userDto = new UserCreateDto();
-        userDto.setId(user.getId());
+
         userDto.setFirstName(user.getFirstName());
         userDto.setLastName(user.getLastName());
         userDto.setEmail(user.getEmail());

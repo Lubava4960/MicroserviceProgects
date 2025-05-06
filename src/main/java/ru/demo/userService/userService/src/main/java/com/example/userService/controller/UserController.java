@@ -55,7 +55,7 @@ public class UserController {
     )
 
     @PutMapping("/{id}")
-    public User updateUserById(@PathVariable long id, @RequestBody UserUpdateDto userUpdateDto) throws ChangeSetPersister.NotFoundException {
+    public UserCreateDto updateUserById(@PathVariable long id, @RequestBody UserUpdateDto userUpdateDto) throws ChangeSetPersister.NotFoundException {
 
         return userService.updateUser((id), userUpdateDto);
     }
