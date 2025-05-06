@@ -5,23 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="274e043b-ecea-4558-bae9-7f4a015dd6ed" name="Changes" comment="add service">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/complete/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/complete/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/complete/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/complete/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/complete/src/main/java/gateway/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/complete/src/main/java/gateway/GatewayConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/complete/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/complete/src/test/java/gateway/ApplicationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/.idea/gs-gateway-main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/gs-gateway-main/.github/dco.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/gs-gateway-main/.github/dependabot.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/gs-gateway-main/.github/workflows/continuous-integration-build.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/gs-gateway-main/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/gs-gateway-main/CONTRIBUTING.adoc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/gs-gateway-main/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/gs-gateway-main/LICENSE.writing.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/gs-gateway-main/README.adoc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/gs-gateway-main/complete/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/gs-gateway-main/complete/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/gs-gateway-main/complete/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/gs-gateway-main/complete/src/test/java/gateway/ApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gs-gateway-main/gs-gateway-main/complete/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gs-gateway-main/gs-gateway-main/complete/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gs-gateway-main/gs-gateway-main/complete/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gs-gateway-main/gs-gateway-main/complete/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gs-gateway-main/gs-gateway-main/complete/src/main/java/gateway/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gs-gateway-main/gs-gateway-main/complete/src/main/java/gateway/GatewayConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gs-gateway-main/gs-gateway-main/complete/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gs-gateway-main/gs-gateway-main/complete/src/test/java/gateway/ApplicationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/demo/complete/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/gs-gateway-main/complete/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/demo/complete/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/demo/complete/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/demo/complete/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/demo/complete/src/main/java/gateway/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/gs-gateway-main/complete/src/main/java/gateway/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/demo/complete/src/main/java/gateway/GatewayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/gs-gateway-main/complete/src/main/java/gateway/GatewayConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/demo/complete/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/demo/gs-gateway-main/gs-gateway-main/complete/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/demo/complete/src/test/java/gateway/ApplicationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/demo/complete/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/demo/complete/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/demo/complete/target/classes/gateway/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/demo/complete/target/classes/gateway/GatewayConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/demo/complete/target/classes/gateway/UriConfiguration.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +52,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Lubava4960&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Lubava4960/MicroserviceProgects.git&quot;,
+    &quot;accountId&quot;: &quot;677dfe67-a5cc-4fe2-ad2a-022b494b90c7&quot;
+  }
+}</component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2wibSoAFRn24f48XQqDiU2A9OGD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -42,11 +78,21 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.gs-gateway [clean,compile,package].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "Spring Boot.Application.executor": "Run",
+    "Spring Boot.CompanyApplication.executor": "Run",
+    "Spring Boot.EurekaServerApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/admin/MicroserviceProgect/MicroserviceProject",
+    "last_opened_file_path": "C:/Users/admin/MicroserviceProgect/MicroserviceProject/src/main/java/ru/demo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -57,9 +103,15 @@
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\admin\MicroserviceProgect\MicroserviceProject\src\main\java\ru\demo" />
-      <recent name="C:\Users\admin\MicroserviceProgect\MicroserviceProject\src\main\java\ru\demo\companyServise" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\MicroserviceProgect\MicroserviceProject\src\main\java\ru\demo\gs-gateway-main\gs-gateway-main\complete" />
+      <recent name="C:\Users\admin\MicroserviceProgect\MicroserviceProject\src\main\java\ru\demo\complete\gs-gateway-main" />
+      <recent name="C:\Users\admin\MicroserviceProgect\MicroserviceProject\src\main\java\ru\demo\complete\gs-gateway-main\gs-gateway-main" />
+      <recent name="C:\Users\admin\MicroserviceProgect\MicroserviceProject\src\main\java\ru\demo\complete" />
+      <recent name="C:\Users\admin\MicroserviceProgect\MicroserviceProject\src\main\java\ru\demo\complete\src\gs-gateway-main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -72,7 +124,20 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.CompanyApplication">
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="eureka-server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="eureka-server" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="gs-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="gateway.Application" />
@@ -119,6 +184,8 @@
       <option name="presentableId" value="Default" />
       <updated>1746527343686</updated>
       <workItem from="1746527344746" duration="1313000" />
+      <workItem from="1746552142652" duration="2013000" />
+      <workItem from="1746554637516" duration="606000" />
     </task>
     <task id="LOCAL-00001" summary="add service">
       <option name="closed" value="true" />
@@ -133,6 +200,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add service" />

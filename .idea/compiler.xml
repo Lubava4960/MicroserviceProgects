@@ -7,13 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="companyService" />
-        <module name="userService" />
-      </profile>
-      <profile name="Annotation profile for gs-gateway" enabled="true">
-        <sourceOutputDir name="../../../../../../../gs-gateway-main/gs-gateway-main/complete/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../../../../../../../gs-gateway-main/gs-gateway-main/complete/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
         <module name="gs-gateway" />
+        <module name="userService" />
       </profile>
       <profile name="Annotation profile for microserviceProject" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />

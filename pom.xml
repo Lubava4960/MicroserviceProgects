@@ -34,7 +34,7 @@
         <module>src/main/java/ru/demo/userService/userService</module>
         <module>src/main/java/ru/demo/companyServise/company</module>
         <module>src/main/java/ru/demo/eureca-server</module>
-        <module>src/main/java/ru/demo/complete</module>
+        <module>src/main/java/ru/demo/gs-gateway-main/gs-gateway-main/complete</module>
 
 
     </modules>
